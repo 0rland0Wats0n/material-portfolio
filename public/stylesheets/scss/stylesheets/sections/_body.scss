@@ -1,0 +1,57 @@
+#body {
+
+	section {
+		padding: 40px 10px;
+		position: relative;
+
+		.section-container {
+			width: 800px;
+			max-width: 100%;
+			padding-top: 100px;
+			margin: 0 auto;
+
+			p {
+				width: 500px;
+				max-width: 100%;
+				margin: 0 auto;
+				font-size: 1.5em;
+				font-weight: 200;
+				text-align: center;
+			}
+		}
+
+		&.section1 {
+
+			&::before {
+				content: "01";
+				position: absolute;
+				width: 100%;
+				top: 60px;
+				text-align: center;
+				font-size: 6em;
+				text-transform: uppercase;
+				font-weight: bolder;
+				color: rgba(209, 209, 209, 0.6);
+			}
+		}
+
+		&.section2 {
+
+			&::before {
+				content: "02";
+				position: absolute;
+				width: 100%;
+				top: 40px;
+				text-align: center;
+				font-size: 6em;
+				text-transform: uppercase;
+				font-weight: bolder;
+				color: rgba(255, 255, 255, 1);
+			}
+		}
+
+		&:nth-child(2n) {
+			background-color: #f1f1f1;
+		}
+	}
+}
