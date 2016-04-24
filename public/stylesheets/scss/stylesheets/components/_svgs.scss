@@ -1,0 +1,16 @@
+svg {
+	overflow: visible !important;
+
+	&#orlando {
+		.st {
+
+			&.o1 { @include animation(jump 2s linear 1s) }
+			&.r {  @include animation(jump 2s linear 1.2s) }
+			&.l {  @include animation(jump 2s linear 1.4s) }
+			&.a {  @include animation(jump 2s linear 1.6s) }
+			&.n {  @include animation(jump 2s linear 1.8s) }
+			&.d {  @include animation(jump 2s linear 2s) }
+			&.o2 {  @include animation(jump 2s linear 2.2s) }
+		}
+	}
+}

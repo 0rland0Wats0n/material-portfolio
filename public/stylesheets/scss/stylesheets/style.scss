@@ -1,8 +1,23 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+	box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+body,
+html {
+
+	//import frameworks
+	@import "bourbon/bourbon";
+
+	// import components
+	@import "components/variables";
+	@import "components/parallax";
+	@import "components/grid";
+	@import "components/animations";
+	@import "components/svgs";
+
+	// import sections
+	@import "sections/header";
+
+
+
 }
