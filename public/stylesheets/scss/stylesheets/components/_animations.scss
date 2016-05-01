@@ -5,3 +5,15 @@
 	75% { @include transform(translateY(-30px)) };
 	100% { @include transform(translateY(0)); }
 }
+
+@include keyframes(slide-bg) {
+	0% { background-position: 0 0; }
+	50% { background-position: 100% 0; }
+	100% { background-position: 0 0;}
+}
+
+@include keyframes(slide-bg-rev) {
+	0% { background-position: 0 0; }
+	50% { background-position: 100% 0; }
+	100% { background-position: 0 0;}
+}

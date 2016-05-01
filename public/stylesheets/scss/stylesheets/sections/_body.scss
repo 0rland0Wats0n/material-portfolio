@@ -1,0 +1,33 @@
+#body {
+
+	section {
+		padding: 40px 10px;
+		position: relative;
+
+		.section-container {
+			width: 800px;
+			max-width: 100%;
+			margin: 0 auto;
+
+			h3 {
+				width: 500px;
+				max-width: 100%;
+				margin: 0 auto;
+				font-weight: 100;
+				text-align: center;
+			}
+		}
+
+		&.section1 {
+
+		}
+
+		&.section2 {
+
+		}
+
+		&:nth-child(2n) {
+			background-color: #f1f1f1;
+		}
+	}
+}
