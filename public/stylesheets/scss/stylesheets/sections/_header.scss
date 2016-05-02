@@ -3,7 +3,7 @@
 	height: 500px;
 	padding: 20px;
 	position: relative;
-	background-color: #03a9f4;
+	background-color: $light-blue;
 
 	.header-bg-mountains {
 		width: 100%;
@@ -15,7 +15,7 @@
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: auto 500px;
-		@include animation(slide-bg 120s linear infinite);
+		@include animation(slide-bg 180s linear 2s infinite);
 	}
 
 	.header-bg-clouds {
@@ -28,7 +28,7 @@
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: auto 300px;
-		@include animation(slide-bg-rev 120s linear infinite);
+		@include animation(slide-bg-rev 180s linear 2s infinite);
 	}
 
 	@import '../components/banner';
