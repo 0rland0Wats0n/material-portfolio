@@ -13,15 +13,31 @@ block content
       li: a(href="#education"): h4 Education
       li: a(href="#work"): h4 Work
       li: a(href="#contact"): h4 Contact
-  
-  section#about
-    img.avatar(src='/images/avatar.jpg')
-    .about
-      h1.name Orlando Watson
-      p.profession Frontend Developer
-      p.info
-        | My name is Orlando Watson. I am a Frontend Web Developer from Jamaica. I started web development in my freshman year of undergrad
-        | and fell in-love with it instantly. I love exploring design and interaction trends for web. I develop websites, icons and logos.
-      .about-buttons
-        
+  .body
+    section#about
+      img.avatar(src='/images/avatar.jpg')
+      .about
+        h1.name Orlando Watson
+        p.profession Frontend Developer
+        p.info
+          | My name is Orlando Watson. I am a Frontend Web Developer from Jamaica. I started web development in my freshman year of undergrad
+          | and fell in-love with it instantly. I love exploring design and interaction trends for web. I develop websites, icons and logos.
+        .about-buttons
+          a.button.resume-button(href="#") Resum&egrave;
+          a.button.work-button(href="#work") See Work
+    .section-divider
+      h2 Skills
+    section#skills
+      ul.skills--professional-skills
+        h2.skill-heading.prof Professional Skills
+        li.skill-item
+          p.skill HTML5 & CSS3
+          .skill-item--level
+            span.percent
+      ul.skills--personal-skills
+        h2.skill-heading.pers Personal Skills
+        li.skill-item
+          p.skill Team Work
+          .skill-item--level
+            span.percent
   footer
