@@ -1,53 +1,27 @@
 extends layout
-include mixins/orlando-svg
 
 block content
-	#header
-		.header-bg-mountains
-		.header-bg-clouds
-		
-		#nav
-		
-		#banner
-			.banner-text
-				h2.iam I'm
-				+orlando
-				h4.developer a full-stack web developer.
-				
-	#body
-		section.section1.intro
-			.section-container
-				h4 I am a self-taught full-stack web developer. I have a passion for frontend design and development for both web and mobile devices;
-		
-		section.section2.skills
-			.section-container
-				h2.heading skills
-				.skill
-					.progress.green.lighten-1
-						.determinate(style="width: 90%").green.darken-3
-					h4.skill-name HTML/CSS
-				.skill
-					.progress.green.lighten-1
-						.determinate(style="width: 80%").green.darken-3
-					h4.skill-name Sass
-				.skill
-					.progress.green.lighten-1
-						.determinate(style="width: 80%").green.darken-3
-					h4.skill-name JavaScript
-				.skill
-					.progress.green.lighten-1
-						.determinate(style="width: 70%").green.darken-3
-					h4.skill-name Node.js
-				.skill
-					.progress.green.lighten-1
-						.determinate(style="width: 60%").green.darken-3
-					h4.skill-name PHP
-				.skill
-					.progress.green.lighten-1
-						.determinate(style="width: 80%").green.darken-3
-					h4.skill-name MongoDB
-				.skill
-					.progress.green.lighten-1
-						.determinate(style="width: 90%").green.darken-3
-					h4.skill-name Adobe Photoshop/Illustrator
-					
+  header
+    .header-info-container
+      p.header-info--item.header-info--phone-number 415.505.1530
+      a.header-info--item.header-info--email(href='mailto:thewatsonorlando@gmail.com', target='_blank')
+        p thewatsonorlando@gmail.com
+    ul.header-navigation
+      li: a(href="#about"): h4 About
+      li: a(href="#skills"): h4 Skills
+      li: a(href="#experience"): h4 Experience
+      li: a(href="#education"): h4 Education
+      li: a(href="#work"): h4 Work
+      li: a(href="#contact"): h4 Contact
+  
+  section#about
+    img.avatar(src='/images/avatar.jpg')
+    .about
+      h1.name Orlando Watson
+      p.profession Frontend Developer
+      p.info
+        | My name is Orlando Watson. I am a Frontend Web Developer from Jamaica. I started web development in my freshman year of undergrad
+        | and fell in-love with it instantly. I love exploring design and interaction trends for web. I develop websites, icons and logos.
+      .about-buttons
+        
+  footer
