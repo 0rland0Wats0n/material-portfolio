@@ -7,7 +7,7 @@ block content
       a.header-info--item.header-info--email(href='mailto:thewatsonorlando@gmail.com', target='_blank')
         p thewatsonorlando@gmail.com
     ul.header-navigation
-      li: a(href="#about"): h4 About
+      li.active: a(href="#about"): h4 About
       li: a(href="#skills"): h4 Skills
       li: a(href="#experience"): h4 Experience
       li: a(href="#education"): h4 Education
@@ -30,14 +30,15 @@ block content
     section#skills
       ul.skills--professional-skills
         h2.skill-heading.prof Professional Skills
-        li.skill-item
-          p.skill HTML5 & CSS3
-          .skill-item--level
-            span.percent
+        each skill in proSkills
+          li.skill-item
+            p.skill #{skill.name}
+            .skill-item--level
+              span.percent(class="#{skill.level}")
       ul.skills--personal-skills
         h2.skill-heading.pers Personal Skills
         li.skill-item
           p.skill Team Work
           .skill-item--level
-            span.percent
+            span.percent.hundred
   footer
