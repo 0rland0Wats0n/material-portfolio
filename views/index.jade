@@ -25,8 +25,10 @@ block content
         .about-buttons
           a.button.resume-button(href="#") Resum&egrave;
           a.button.work-button(href="#work") See Work
+
     .section-divider
       h2 Skills
+
     section#skills
       ul.skills--professional-skills
         h2.skill-heading.prof Professional Skills
@@ -37,8 +39,19 @@ block content
               span.percent(class="#{skill.level}")
       ul.skills--personal-skills
         h2.skill-heading.pers Personal Skills
-        li.skill-item
-          p.skill Team Work
-          .skill-item--level
-            span.percent.hundred
+        each skill in perSkills
+          li.skill-item
+            p.skill #{skill.name}
+            .skill-item--level
+              span.percent(class="#{skill.level}")
+    
+    .section-divider
+      h2 Work Experience
+    
+    section#experience
+      each work in workExp
+        .experience
+          p.title= work.title
+          p.date= work.date
+          p.description= work.description
   footer
