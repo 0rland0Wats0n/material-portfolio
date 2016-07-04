@@ -50,8 +50,9 @@ block content
     
     section#experience
       each work in workExp
-        .experience
-          p.title= work.title
-          p.date= work.date
-          p.description= work.description
+        .experience-container
+          .experience
+            p.title= work.title
+            p.date= work.date
+            p.description= work.description
   footer

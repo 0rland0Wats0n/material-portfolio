@@ -48,6 +48,11 @@ ul {
   margin-right: 20px;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /*
   HEADER
@@ -279,28 +284,42 @@ section#skills ul .skill-item .skill-item--level span.percent.eighty { width: 80
 section#skills ul .skill-item .skill-item--level span.percent.ninety { width: 90%; }
 section#skills ul .skill-item .skill-item--level span.percent.hundred { width: 100%; }
 
-section#experience .experience {
+section#experience {
+  position: relative;
+}
+
+section#experience .experience-container {
+  padding: 0;
+  margin: 0 auto 20px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+section#experience .experience-container .experience {
   background-color: white;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   padding: 25px 20px;
-  margin: 0 auto 20px;
   max-width: 400px;
+  display: inline-block;
+  text-align: left;
+  position: relative;
 }
 
-section#experience .experience .title {
+section#experience .experience-container .experience .title {
   color: #727272;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 
-section#experience .experience .date {
+section#experience .experience-container .experience .date {
   color: #2196F3;
   opacity: 0.5;
   text-transform: uppercase;
   margin-top: 0;
 }
 
-section#experience .experience .description {
+section#experience .experience-container .experience .description {
   color: #B6B6B6;
   font-weight: 300;
 }
@@ -349,5 +368,74 @@ footer {
 
   section#skills ul {
     width: 50%;
+  }
+}
+
+@media all and (min-width: 950px) {
+  section#experience::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: #B6B6B6;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 7px;
+    margin: auto;
+  }
+
+  section#experience .experience-container:nth-child(2n) {
+    text-align: right;
+  }
+
+  section#experience .experience-container:nth-child(2n) .experience::before {
+    content: '\f0d9';
+    font-family: FontAwesome;
+    font-size: 3em;
+    position: absolute;
+    left: -15px;
+    top: -10px;
+    text-shadow: -3px 0px 4px rgba(0,0,0,0.12), 0 0px 0px rgba(0,0,0,0.24);
+    color: white;
+  }
+
+  section#experience .experience-container:nth-child(2n)::after {
+    content: '\f111';
+    font-family: FontAwesome;
+    position: absolute;
+    max-width: 15px;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #2196F3;
+  }
+
+  section#experience .experience-container:nth-child(2n+1) {
+    text-align: left;
+  }
+
+  section#experience .experience-container:nth-child(2n+1) .experience::before {
+    content: '\f0da';
+    font-family: FontAwesome;
+    font-size: 3em;
+    position: absolute;
+    right: -15px;
+    top: -10px;
+    text-shadow: 3px 0px 4px rgba(0,0,0,0.12), 0 0px 0px rgba(0,0,0,0.24);
+    color: white;
+  }
+
+  section#experience .experience-container:nth-child(2n+1)::after {
+    content: '\f111';
+    font-family: FontAwesome;
+    position: absolute;
+    max-width: 15px;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #2196F3;
   }
 }
